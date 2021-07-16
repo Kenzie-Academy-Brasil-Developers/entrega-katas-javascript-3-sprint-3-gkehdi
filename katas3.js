@@ -1,16 +1,29 @@
 const sampleArray = [469, 755, 244, 245, 758, 450, 302, 20, 712, 71, 456, 21, 398, 339, 882, 848, 179, 535, 940, 472];
 
-function showResults(contagem){
+function showResults(titulo, contagem){
 
 
 let newElement = document.getElementById("js3"); //Captura o local onde quero inserir o elemento
 let elemento = document.createElement("div"); //Criei o elemento Div
+let paragrafo = document.createElement("p")
 let resultado = document.createTextNode(contagem); //Criei um texto dentro da variável resultado
-let espaco = document.createElement("br") //Criei uma <br>
+let cabecalho = document.createElement("h1");
+let texto = document.createTextNode(titulo);
 
-elemento.appendChild(resultado); // Inseri o texto no elemento criado (da Div)
+
+cabecalho.appendChild(texto);
+elemento.appendChild(cabecalho);
+paragrafo.appendChild(resultado); // Inseri o texto no elemento criado (da Div)
+elemento.appendChild(paragrafo);
 newElement.appendChild(elemento); //Inseri o elemento criado (a Div que criei) dentro do Html no local que possui a ID
-newElement.appendChild(espaco); //Inseri <br> dentro dentro do Html no local que possui a ID
+js3.style.color = "red"
+cabecalho.classList.add("classe")
+cabecalho.style.color = "black"
+cabecalho.style.background = "yellow"
+cabecalho.style.width = 110 + "px"
+
+
+
 
 // ========================================================================================
 
@@ -25,246 +38,261 @@ newElement.appendChild(espaco); //Inseri <br> dentro dentro do Html no local que
 // let destination = document.getElementById("js3");
 // destination.appendChild(h1);
 // destination.appendChild(elementoNovo)
-}
+} 
 
 function kata1() {
 
-let contagem = [];
-for(let i=1; i <= 25; i++) {
-contagem.push(i)
+    let titulo = "Kata 1"
+    let contagem = [];
+    for(let i=1; i <= 25; i++) {
+    contagem.push(i)
 } 
-showResults(contagem)
-return contagem
+return showResults(titulo, contagem)
+
 } kata1();
 
 
 function kata2() {
 
-let contagem = [];
+    let titulo = "Kata 2"
+    let contagem = [];
 
-for(let i = 25; i > 0; i--){
+    for(let i = 25; i > 0; i--){
 
-contagem.push(i);
+    contagem.push(i);
 
 }
 
-showResults(contagem)
-return contagem
+return showResults(titulo, contagem)
+
 } kata2();
 
 
 function kata3() {
-let contagem = [];
 
-for(let i = -1; i >= -25; i--){
+    let titulo = "Kata 3"
+    let contagem = [];
 
-contagem.push(i);
+    for(let i = -1; i >= -25; i--){
+
+    contagem.push(i);
 
 }
-showResults(contagem)
-return contagem
+return showResults(titulo, contagem)
+
 } kata3();
 
 function kata4() {
 
-let contagem = [];
+    let titulo = "Kata 4"
+    let contagem = [];
 
-for(let i = -25; i < 0; i++){
+    for(let i = -25; i < 0; i++){
 
-contagem.push(i);
+    contagem.push(i);
 
 }
-showResults(contagem)
-return contagem
+return showResults(titulo, contagem)
+
 } kata4();
 
 function kata5() {
 
-let contagem = [];
-for(let i = 25; i >= -25; i--){
-if(i%2 !==0){
-contagem.push(i);
+    let titulo = "Kata 5"
+    let contagem = [];
+    for(let i = 25; i >= -25; i--){
+    if(i%2 !==0){
+    contagem.push(i);
 }
 }
-showResults(contagem)
-return contagem
+return showResults(titulo, contagem)
+
 } kata5();
-// // implemente o código do kata 5 aqui
+
 
 function kata6() {
 
-let contagem = [];
-for(let i = 1; i <=100; i++){
-if(i%3 ===0){
-contagem.push(i);
+    let titulo = "Kata 6"
+    let contagem = [];
+    for(let i = 1; i <=100; i++){
+    if(i%3 ===0){
+    contagem.push(i);
 }
 }
-showResults(contagem)
-return contagem
+return showResults(titulo, contagem)
+
 } kata6();
-// // implemente o código do kata 6 aqui
+
 
 function kata7() {
 
-let contagem = [];
-for(let i = 1; i <=100; i++){
-if(i%7 ===0){
-contagem.push(i);
+    let titulo = "Kata 7"
+    let contagem = [];
+    for(let i = 1; i <=100; i++){
+    if(i%7 ===0){
+    contagem.push(i);
 }
 }
-showResults(contagem)
-return contagem
+return showResults(titulo, contagem)
+
 } kata7();
-// implemente o código do kata 7 aqui
+
 
 function kata8() {
 
-let contagem = [];
-for(let i = 100; i >0; i--){
-if(i%7 ===0 || i%3 ===0){
-contagem.push(i);
+    let titulo = "Kata 8"
+    let contagem = [];
+    for(let i = 100; i >0; i--){
+    if(i%7 ===0 || i%3 ===0){
+    contagem.push(i);
 }
 }
-showResults(contagem)
-return contagem
+return showResults(titulo, contagem)
+
 } kata8();
-// // implemente o código do kata 8 aqui
+
 
 function kata9() {
 
-let contagem = [];
+    let titulo = "Kata 9"
+    let contagem = [];
+    for(let i = 1; i <=100; i++){
+    if(i%5 ===0 && i%2 !==0) {
 
-for(let i = 1; i <=100; i++){
-
-if(i%5 ===0 && i%2 !==0) {
-
-contagem.push(i);
+    contagem.push(i);
 }
 
 }
-showResults(contagem)
-return contagem
+return showResults(titulo, contagem)
+
 
 } kata9();
-// // implemente o código do kata 9 aqui
+
 
 function kata10() {
 
-let sampleArray = [469, 755, 244, 245, 758, 450, 302, 20, 712, 71, 456, 21, 398, 339, 882, 848, 179, 535, 940, 472];
+    let titulo = "Kata 10"
+    let sampleArray = [469, 755, 244, 245, 758, 450, 302, 20, 712, 71, 456, 21, 398, 339, 882, 848, 179, 535, 940, 472];
+    let contagem = sampleArray
 
-showResults(sampleArray) 
-return sampleArray
+    return showResults(titulo, contagem) 
+
 } 
 kata10();
-// implemente o código do kata 10 aqui
 
 function kata11() {
 
-let contagem = [];
-let sampleArray = [469, 755, 244, 245, 758, 450, 302, 20, 712, 71, 456, 21, 398, 339, 882, 848, 179, 535, 940, 472];
-for (let i = 0; i < sampleArray.length; i++){
+    let titulo = "Kata 11"
+    let contagem = [];
+    let sampleArray = [469, 755, 244, 245, 758, 450, 302, 20, 712, 71, 456, 21, 398, 339, 882, 848, 179, 535, 940, 472];
+    
+    for (let i = 0; i < sampleArray.length; i++){
 
-if(sampleArray[i]%2 === 0) {
+    if(sampleArray[i]%2 === 0) {
 
-contagem.push(sampleArray[i]);
+    contagem.push(sampleArray[i]);
 }
 }
-showResults(contagem)
-return contagem
+return showResults(titulo, contagem)
+
 } kata11();
-// // implemente o código do kata 11 aqui
+
+
 
 function kata12() {
 
-let contagem = [];
-let sampleArray = [469, 755, 244, 245, 758, 450, 302, 20, 712, 71, 456, 21, 398, 339, 882, 848, 179, 535, 940, 472];
-for (let i = 0; i < sampleArray.length; i++){
+    let titulo = "Kata 12"
+    let contagem = [];
+    let sampleArray = [469, 755, 244, 245, 758, 450, 302, 20, 712, 71, 456, 21, 398, 339, 882, 848, 179, 535, 940, 472];
+    for (let i = 0; i < sampleArray.length; i++){
 
-if(sampleArray[i]%2 !== 0) {
+    if(sampleArray[i]%2 !== 0) {
 
-contagem.push(sampleArray[i]);
+    contagem.push(sampleArray[i]);
 }
 }
-showResults(contagem)
-
-return contagem
+return showResults(titulo, contagem)
 
 } kata12();
-// // implemente o código do kata 12 aqui
+
 
 function kata13() {
 
-let contagem = [];
-let sampleArray = [469, 755, 244, 245, 758, 450, 302, 20, 712, 71, 456, 21, 398, 339, 882, 848, 179, 535, 940, 472];
-for (let i = 0; i < sampleArray.length; i++){
-if(sampleArray[i]%8 === 0) {
-contagem.push(sampleArray[i]);
+    let titulo = "Kata 13"
+    let contagem = [];
+    let sampleArray = [469, 755, 244, 245, 758, 450, 302, 20, 712, 71, 456, 21, 398, 339, 882, 848, 179, 535, 940, 472];
+    for (let i = 0; i < sampleArray.length; i++){
+    if(sampleArray[i]%8 === 0) {
+    contagem.push(sampleArray[i]);
 }
 }
-showResults(contagem)
-return contagem
+return showResults(titulo, contagem)
+
 
 } kata13();
-// // implemente o código do kata 13 aqui
+
 
 function kata14() {
 
-let contagem = [];
-let sampleArray = [469, 755, 244, 245, 758, 450, 302, 20, 712, 71, 456, 21, 398, 339, 882, 848, 179, 535, 940, 472];
-for (let i = 0; i < sampleArray.length; i++){
-contagem.push(sampleArray[i]**2);
+    let titulo = "Kata 14"
+    let contagem = [];
+    let sampleArray = [469, 755, 244, 245, 758, 450, 302, 20, 712, 71, 456, 21, 398, 339, 882, 848, 179, 535, 940, 472];
+    for (let i = 0; i < sampleArray.length; i++){
+    contagem.push(sampleArray[i]**2);
 }
-showResults(contagem)
-return contagem
+return showResults(titulo, contagem)
 
 } kata14();
-// // implemente o código do kata 14 aqui
+
 
 function kata15() {
 
-let contagem = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]; 
-let soma = 0;
+    let titulo = "Kata 15"
+    let contagem = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]; 
+    let soma = 0;
 
-for (let i = 0; i < contagem.length; i++) { 
+    for (let i = 0; i < contagem.length; i++) { 
 
-soma += contagem[i];
+    soma += contagem[i];
 } 
-showResults(soma)
-return soma
+return showResults(titulo, soma)
+
 
 } kata15();
 
-// // implemente o código do kata 15 aqui
+
 
 function kata16() {
 
-let sampleArray = [469, 755, 244, 245, 758, 450, 302, 20, 712, 71, 456, 21, 398, 339, 882, 848, 179, 535, 940, 472];
-let soma = 0;
+    let titulo = "Kata 16" 
+    let sampleArray = [469, 755, 244, 245, 758, 450, 302, 20, 712, 71, 456, 21, 398, 339, 882, 848, 179, 535, 940, 472];
+    let soma = 0;
 
-for (let i = 0; i < sampleArray.length; i++) {
-soma += sampleArray[i];
+    for (let i = 0; i < sampleArray.length; i++) {
+    soma += sampleArray[i];
 }
-showResults(soma)
-return soma
+return showResults(titulo, soma)
+
 } kata16();
-// // implemente o código do kata 16 aqui
+
 
 function kata17() {
 
+let titulo = "Kata 17" 
 let sampleArray = [469, 755, 244, 245, 758, 450, 302, 20, 712, 71, 456, 21, 398, 339, 882, 848, 179, 535, 940, 472];
 let menorNum = Math.min(...sampleArray) 
 
-showResults(menorNum)
-return menorNum
+return showResults(titulo, menorNum)
+
 
 } kata17();
 
 function kata18() {
+    let titulo = "Kata 18"
+    let sampleArray = [469, 755, 244, 245, 758, 450, 302, 20, 712, 71, 456, 21, 398, 339, 882, 848, 179, 535, 940, 472];
+    let maiorNum = Math.max(...sampleArray)
 
-let sampleArray = [469, 755, 244, 245, 758, 450, 302, 20, 712, 71, 456, 21, 398, 339, 882, 848, 179, 535, 940, 472];
-let maiorNum = Math.max(...sampleArray)
+    return showResults(titulo, maiorNum)
 
-showResults(maiorNum)
-return maiorNum
 } kata18();
 
