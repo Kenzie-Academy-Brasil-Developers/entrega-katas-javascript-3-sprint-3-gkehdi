@@ -270,9 +270,11 @@ function kata15() {
 
     soma += contagem[i];
 } 
- showResults(titulo, soma)
+showResults(titulo, contagem)
 
-return contagem
+return soma
+
+
 
 } kata15();
 
@@ -289,7 +291,8 @@ function kata16() {
 }
 showResults(titulo, soma)
 
-return contagem
+return soma
+
 } kata16();
 
 
@@ -301,7 +304,7 @@ let menorNum = Math.min(...sampleArray)
 
 showResults(titulo, menorNum)
 
-return contagem
+return menorNum
 
 } kata17();
 
@@ -312,7 +315,7 @@ function kata18() {
 
 showResults(titulo, maiorNum)
 
-    return contagem
-    
+    return maiorNum
+
 } kata18();
 
